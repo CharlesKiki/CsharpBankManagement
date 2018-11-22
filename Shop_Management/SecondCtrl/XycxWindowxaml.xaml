@@ -1,0 +1,37 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:Controls="clr-namespace:Shop_Management.Controls" x:Class="Shop_Management.SecondCtrl.XycxWindowxaml"
+        Title="XycxWindowxaml" Height="345" Width="580" MinHeight="345" MaxHeight="345" MinWidth="580" MaxWidth="580"
+        WindowStyle="None" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" AllowsTransparency="True" Opacity="0.9">
+    <Window.Background>
+        <ImageBrush ImageSource="/Shop_Management;component/Images/SecondCtrlBackgound.jpg"/>
+    </Window.Background>
+    <Grid x:Name="Gd1">
+        <Grid x:Name="gdTitle" Margin="0,-1,0,0" Opacity="0.8" Height="20" VerticalAlignment="Top" >
+            <Button x:Name="btnMin" Style="{StaticResource MinButtonStyle}" Content="Button" Margin="0,0,24,0" Click="btnmin_Click" HorizontalAlignment="Right" Width="30" Opacity="0.8"/>
+            <Button  x:Name="tbnClose" Style="{StaticResource CloseButtonStyle}"  Content="Button" HorizontalAlignment="Right" Width="26" Click="tbnclose_Click" Margin="0,0,-2,0" Opacity="0.8"/>
+        </Grid>
+        <Label Content="" HorizontalAlignment="Left" Height="19" VerticalAlignment="Top" Width="534"/>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="243" Margin="105,70,0,0" VerticalAlignment="Top" Width="370" CornerRadius="5" Background="#FF918F8F">
+        </Border>
+        <Label Content="姓名：" HorizontalAlignment="Left" Height="26" Margin="181,115,0,0" VerticalAlignment="Top" Width="47" Foreground="White" FontSize="15"/>
+        <Label Content="身份证号：" HorizontalAlignment="Left" Height="27" Margin="150,157,0,0" VerticalAlignment="Top" Width="83" Foreground="White" FontSize="15"/>
+        <Label Content="手机号：" HorizontalAlignment="Left" Height="26" Margin="165,205,0,0" VerticalAlignment="Top" Width="68" Foreground="White" FontSize="15"/>
+        <TextBox HorizontalAlignment="Left" Height="24" Margin="233,119,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="186" Background="Black" BorderBrush="{x:Null}" Foreground="White" FontSize="15"/>
+        <TextBox HorizontalAlignment="Left" Height="24" Margin="233,160,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="186" Background="Black" BorderBrush="{x:Null}" Foreground="White" FontSize="15"/>
+        <TextBox HorizontalAlignment="Left" Height="24" Margin="233,205,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="186" Background="Black" BorderBrush="{x:Null}" Foreground="White" FontSize="15"/>
+        <Controls:ImageButton x:Name="btnScan" Content="查询" HorizontalAlignment="Left" Height="28" Margin="250,254,0,0" VerticalAlignment="Top" Width="80" Background="#FF73E091" FontSize="16" Click="btnScan_Click" />
+        <Label Content="信用记录查询" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Height="33" Margin="200,10,0,0" VerticalAlignment="Top" Width="160" Foreground="Red" FontSize="20"/>
+        <Rectangle Fill="#FFF4F4F5" Height="1" Margin="68,48,68,0" Stroke="#FFF1CC4A" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="-1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+    </Grid>
+</Window>

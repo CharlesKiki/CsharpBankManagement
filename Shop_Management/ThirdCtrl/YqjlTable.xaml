@@ -1,0 +1,56 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:Controls="clr-namespace:Shop_Management.Controls" x:Class="Shop_Management.ThirdCtrl.YqjlTable"
+        Title="XycxWindowxaml" Height="572.015" Width="675.246" 
+        WindowStyle="None" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" AllowsTransparency="True" Opacity="0.9" Background="#FFDDF0ED">
+    <Grid x:Name="Gd1">
+        <Grid x:Name="gdTitle" Margin="0,-1,0,0" Opacity="0.8" Height="20" VerticalAlignment="Top" >
+            <Button x:Name="btnMin" Style="{StaticResource MinButtonStyle}" Content="Button" Margin="0,0,24,0" Click="btnmin_Click" HorizontalAlignment="Right" Width="30" Opacity="0.8"/>
+            <Button  x:Name="tbnClose" Style="{StaticResource CloseButtonStyle}"  Content="Button" HorizontalAlignment="Right" Width="26" Click="tbnclose_Click" Margin="0,0,-2,0" Opacity="0.8"/>
+        </Grid>
+        <Label Content="" Height="19" VerticalAlignment="Top" Margin="0,0,59,0"/>
+        <Label Content="逾期详情" HorizontalContentAlignment="Center" Height="33" Margin="210,10,210,0" VerticalAlignment="Top" Foreground="Red" FontSize="20"/>
+        <Rectangle Fill="#FFF4F4F5" Height="1" Margin="68,48,68,0" Stroke="#FFF1CC4A" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="-1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <Controls:ImageButton x:Name="btnTxkhzl" FontSize="12" Content="关闭" Margin="285,496,286,0" VerticalAlignment="Top" Height="31" Width="Auto" Background="Red"/>
+        <Grid x:Name="gdyqjl" HorizontalAlignment="Left" Height="378" Margin="62,80,0,0" VerticalAlignment="Top" Width="554">
+            <Label Content="姓       名：" HorizontalAlignment="Left" Height="39" Margin="17,14,0,0" VerticalAlignment="Top" Width="74" Foreground="Black"/>
+            <TextBox x:Name="txt_b_name" HorizontalAlignment="Left" Height="33" Margin="85,16,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="141" SelectionBrush="#FF47C5D8" Background="{x:Null}" BorderBrush="Black"/>
+            <Label Content="合 同 号 ：" HorizontalAlignment="Left" Height="38" Margin="17,57,0,0" VerticalAlignment="Top" Width="74" Foreground="Black"/>
+            <TextBox x:Name="txt_b_ht_id" HorizontalAlignment="Left" Height="32" Margin="85,61,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="141" SelectionBrush="#FF47C5D8" Background="{x:Null}" BorderBrush="Black"/>
+            <Label Content="身 份 证 ：" HorizontalAlignment="Left" Height="40" Margin="17,104,0,0" VerticalAlignment="Top" Width="74" Foreground="Black"/>
+            <TextBox x:Name="txt_b_sfz" HorizontalAlignment="Left" Height="32" Margin="85,104,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="223" SelectionBrush="#FF47C5D8" Background="{x:Null}" BorderBrush="Black"/>
+            <Label Content="逾期起始时间：" HorizontalAlignment="Left" Height="36" Margin="17,145,0,0" VerticalAlignment="Top" Width="93" Foreground="Black"/>
+            <TextBox x:Name="txt_b_yq_sdate" HorizontalAlignment="Left" Height="32" Margin="115,145,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="111" SelectionBrush="#FF47C5D8" Background="{x:Null}" BorderBrush="Black"/>
+            <Label Content="逾期天数：" HorizontalAlignment="Left" Height="36" Margin="17,186,0,0" VerticalAlignment="Top" Width="93" Foreground="Black"/>
+            <TextBox x:Name="txt_b_yq_dcount" HorizontalAlignment="Left" Height="32" Margin="86,186,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140" SelectionBrush="#FF47C5D8" Background="{x:Null}" BorderBrush="Black"/>
+            <Label Content="逾期期数：" HorizontalAlignment="Left" Height="38" Margin="17,229,0,0" VerticalAlignment="Top" Width="93" Foreground="Black"/>
+            <TextBox x:Name="txt_b_yq_ycount" HorizontalAlignment="Left" Height="32" Margin="86,230,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140" SelectionBrush="#FF47C5D8" Background="{x:Null}" BorderBrush="Black"/>
+            <Label Content="贷款总额：" HorizontalAlignment="Left" Height="40" Margin="17,268,0,0" VerticalAlignment="Top" Width="93" Foreground="Black"/>
+            <TextBox x:Name="txt_b_dk_zmoney" HorizontalAlignment="Left" Height="34" Margin="115,273,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="111" SelectionBrush="#FF47C5D8" Background="{x:Null}" BorderBrush="Black"/>
+            <Label Content="剩余期数 ：" HorizontalAlignment="Left" Height="38" Margin="17,312,0,0" VerticalAlignment="Top" Width="74" Foreground="Black"/>
+            <TextBox x:Name="txt_b_dk_y_scount" HorizontalAlignment="Left" Height="33" Margin="85,315,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="141" SelectionBrush="#FF47C5D8" Background="{x:Null}" BorderBrush="Black"/>
+            <Label Content="总 期 数 ：" HorizontalAlignment="Left" Height="39" Margin="318,14,0,0" VerticalAlignment="Top" Width="73" Foreground="Black"/>
+            <TextBox x:Name="txt_b_dk_y_count" HorizontalAlignment="Left" Height="33" Margin="385,16,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="153" SelectionBrush="#FF47C5D8" Background="{x:Null}" BorderBrush="Black"/>
+            <Label Content="中 介 人 ：" HorizontalAlignment="Left" Height="40" Margin="318,104,0,0" VerticalAlignment="Top" Width="79" Foreground="Black"/>
+            <TextBox x:Name="txt_b_zjr" HorizontalAlignment="Left" Height="32" Margin="397,103,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="141" SelectionBrush="#FF47C5D8" Background="{x:Null}" BorderBrush="Black"/>
+            <Label Content="中介人所属分店：" HorizontalAlignment="Left" Height="40" Margin="318,149,0,0" VerticalAlignment="Top" Width="114" Foreground="Black"/>
+            <ComboBox x:Name="cmb_b_zjr_ofd" HorizontalAlignment="Left" Height="32" Margin="432,145,0,0" VerticalAlignment="Top" Width="106" Background="{x:Null}" BorderBrush="{x:Null}"/>
+            <Label Content="逾期备注：" HorizontalAlignment="Left" Height="39" Margin="299,230,0,0" VerticalAlignment="Top" Width="74" Foreground="Black"/>
+            <TextBox x:Name="txt_b_yq_remark" HorizontalAlignment="Left" Height="99" Margin="299,268,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="235" SelectionBrush="#FF47C5D8" Background="{x:Null}" BorderBrush="Black"/>
+            <Label Content="所属分店：" HorizontalAlignment="Left" Height="39" Margin="318,183,0,0" VerticalAlignment="Top" Width="78" Foreground="Black"/>
+            <ComboBox x:Name="cmb_b_ofd" HorizontalAlignment="Left" Height="32" Margin="397,186,0,0" VerticalAlignment="Top" Width="137" Background="{x:Null}" BorderBrush="{x:Null}"/>
+            <Label Content="每应还金额：" HorizontalAlignment="Left" Height="39" Margin="318,57,0,0" VerticalAlignment="Top" Width="79" Foreground="Black"/>
+            <TextBox x:Name="txt_b_dk_y_money" HorizontalAlignment="Left" Height="34" Margin="397,59,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="141" SelectionBrush="#FF47C5D8" Background="{x:Null}" BorderBrush="Black"/>
+        </Grid>
+    </Grid>
+</Window>

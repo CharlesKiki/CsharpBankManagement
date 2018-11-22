@@ -1,0 +1,44 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:Controls="clr-namespace:Shop_Management.Controls"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Shop_Management.Controls" 
+             x:Class="Shop_Management.Controls.CustomerInfo" 
+             mc:Ignorable="d"  
+             d:DesignHeight="720" d:DesignWidth="1278">
+    <Grid x:Name="Gr1">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Shop_Management;component/Images/MainBack.jpg"/>
+        </Grid.Background>
+        <Grid HorizontalAlignment="Left" Name="grid_child" Height="690" Visibility="Hidden" VerticalAlignment="Top" Width="1278" Margin="0,30,0,0" >
+            <local:ImageButton HorizontalAlignment="Left" Height="100" Margin="435,474,0,0" VerticalAlignment="Top" Width="100"/>
+
+        </Grid>
+        <Grid Name="grid_Cust" Margin="-2,0,2,1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="389*"/>
+                <ColumnDefinition Width="889*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="287*"/>
+                <RowDefinition Height="432*"/>
+            </Grid.RowDefinitions>
+            <local:ImageButton x:Name="btnkhzl" Content="客户资料" HorizontalAlignment="Left" Height="106" Margin="13,8,0,0" VerticalAlignment="Top" Width="280" Background="#FFBA6D41" Opacity="0.95" Grid.Row="1" Grid.Column="1" Click="btnkhzl_Click" />
+            <local:ImageButton x:Name="btnyqjl" Content="逾期记录" HorizontalAlignment="Left" Height="106" Margin="298,119,0,0" VerticalAlignment="Top" Width="138" Background="#FFF91111" Grid.Row="1" Grid.Column="1" Click="btnyqjl_Click"/>
+            <local:ImageButton x:Name="btnfkjl" Content="放款记录" HorizontalAlignment="Left" Height="106" Margin="441,119,0,0" VerticalAlignment="Top" Width="138" Background="#FF292533" Grid.Row="1" Grid.Column="1" Click="btnfkjl_Click"/>
+            <local:ImageButton x:Name="btndksh" Content="贷款审核" HorizontalAlignment="Left" Height="106" Margin="441,8,0,0" VerticalAlignment="Top" Width="138" Background="#FFA840DD" Grid.Row="1" Grid.Column="1" Click="btndksh_Click"/>
+            <local:ImageButton x:Name="btndkxx" Content="贷款信息" HorizontalAlignment="Left" Height="106" Margin="298,8,0,0" VerticalAlignment="Top" Width="138" Background="#FF454AAE" Grid.Row="1" Grid.Column="1" Click="btndkxx_Click"/>
+            <local:ImageButton x:Name="btnhtxx" Content="合同信息" HorizontalAlignment="Left" Height="106" Margin="13,119,0,0" VerticalAlignment="Top" Width="138" Background="#FFF1CF15" Grid.Row="1" Grid.Column="1" Click="btnhtxx_Click"/>
+            <local:ImageButton x:Name="btnhkxx" Content="还款记录" HorizontalAlignment="Left" Height="106" Margin="155,119,0,0" VerticalAlignment="Top" Width="138" Background="#FF08F6BB" Grid.Row="1" Grid.Column="1" Click="btnhkxx_Click"/>
+        </Grid>
+    </Grid>
+
+</UserControl>

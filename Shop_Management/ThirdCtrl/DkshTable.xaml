@@ -1,0 +1,44 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:Controls="clr-namespace:Shop_Management.Controls" x:Class="Shop_Management.ThirdCtrl.DkshTable"
+        Title="XycxWindowxaml" Height="609.925" Width="549.784" 
+        WindowStyle="None" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" AllowsTransparency="True" Opacity="0.9" Background="#FFDDF0ED">
+    <Grid x:Name="Gd1" Loaded="Gd1_Loaded">
+        <Grid x:Name="gdTitle" Margin="0,-1,0,0" Opacity="0.8" Height="20" VerticalAlignment="Top" >
+            <Button x:Name="btnMin" Style="{StaticResource MinButtonStyle}" Content="Button" Margin="0,0,24,0" Click="btnmin_Click" HorizontalAlignment="Right" Width="30" Opacity="0.8"/>
+            <Button  x:Name="tbnClose" Style="{StaticResource CloseButtonStyle}"  Content="Button" HorizontalAlignment="Right" Width="26" Click="tbnclose_Click" Margin="0,0,-2,0" Opacity="0.8"/>
+        </Grid>
+        <Label Content="" Height="19" VerticalAlignment="Top" Margin="0,0,52,0"/>
+        <Label Content="贷款审核信息" HorizontalContentAlignment="Center" Height="33" Margin="210,10,210,0" VerticalAlignment="Top" Foreground="Red" FontSize="20"/>
+        <Rectangle Fill="#FFF4F4F5" Height="1" Margin="68,48,68,0" Stroke="#FFF1CC4A" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="-1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <Controls:ImageButton x:Name="btnTj" FontSize="12" Content="提交" Margin="232,530,232,0" VerticalAlignment="Top" Height="31" Width="Auto" Background="Red" Click="btnTj_Click"/>
+        <Grid x:Name="gdshxx" Height="442" Margin="96,70,94,0" VerticalAlignment="Top">
+            <Label Content="姓       名：" HorizontalAlignment="Left" Height="31" Margin="42,29,0,0" VerticalAlignment="Top" Width="71" Foreground="Black"/>
+            <TextBox x:Name="txt_b_jt_count" HorizontalAlignment="Left" Height="27" Margin="107,31,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="135" SelectionBrush="#FF47C5D8" Background="{x:Null}" BorderBrush="Black"/>
+            <Label Content="身 份 证 ：" HorizontalAlignment="Left" Height="31" Margin="42,64,0,0" VerticalAlignment="Top" Width="71" Foreground="Black"/>
+            <TextBox x:Name="txt_b_fname" HorizontalAlignment="Left" Height="27" Margin="107,66,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="211" SelectionBrush="#FF47C5D8" Background="{x:Null}" BorderBrush="Black"/>
+            <Label Content="关联的贷款信息ID：" HorizontalAlignment="Left" Height="31" Margin="42,101,0,0" VerticalAlignment="Top" Width="113" Foreground="Black"/>
+            <TextBox x:Name="txt_b_mname" HorizontalAlignment="Left" Height="26" Margin="161,102,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="110" SelectionBrush="#FF47C5D8" Background="{x:Null}" BorderBrush="Black"/>
+            <Label Content="审核人名：" HorizontalAlignment="Left" Height="32" Margin="42,134,0,0" VerticalAlignment="Top" Width="71" Foreground="Black"/>
+            <TextBox x:Name="txt_b_phone1" HorizontalAlignment="Left" Height="26" Margin="107,137,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="164" SelectionBrush="#FF47C5D8" Background="{x:Null}" BorderBrush="Black"/>
+            <Label Content="审核意见：" HorizontalAlignment="Left" Height="31" Margin="42,168,0,0" VerticalAlignment="Top" Width="71" Foreground="Black"/>
+            <Label Content="审核进度：" HorizontalAlignment="Left" Height="31" Margin="42,202,0,0" VerticalAlignment="Top" Width="71" Foreground="Black"/>
+            <TextBox x:Name="txt_b_bkcard1" HorizontalAlignment="Left" Height="27" Margin="107,204,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="164" SelectionBrush="#FF47C5D8" Background="{x:Null}" BorderBrush="Black"/>
+            <Label Content="审核结果的理由备注：" HorizontalAlignment="Left" Height="31" Margin="42,277,0,0" VerticalAlignment="Top" Width="146" Foreground="Black"/>
+            <TextBox x:Name="txt_b_bkcard2" HorizontalAlignment="Left" Height="96" Margin="42,308,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="276" SelectionBrush="#FF47C5D8" Background="{x:Null}" BorderBrush="Black"/>
+            <Label Content="所属分店：" HorizontalAlignment="Left" Height="31" Margin="42,241,0,0" VerticalAlignment="Top" Width="71" Foreground="Black"/>
+            <ComboBox x:Name="cmb_b_gender" HorizontalAlignment="Left" Height="22" Margin="107,171,0,0" VerticalAlignment="Top" Width="96" Background="{x:Null}" BorderBrush="{x:Null}"/>
+            <ComboBox x:Name="cmb_b_gender_Copy" HorizontalAlignment="Left" Height="22" Margin="107,243,0,0" VerticalAlignment="Top" Width="96" Background="{x:Null}" BorderBrush="{x:Null}"/>
+        </Grid>
+    </Grid>
+</Window>

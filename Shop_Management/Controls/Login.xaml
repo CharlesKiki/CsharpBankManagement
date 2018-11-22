@@ -1,0 +1,67 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Shop_Management.Controls" x:Class="Shop_Management.Controls.Login" 
+             mc:Ignorable="d" Height="720" Width="1278" Foreground="{x:Null}">
+    <UserControl.Background>
+        <ImageBrush ImageSource="/Shop_Management;component/Images/LoginBackground.jpg"/>
+    </UserControl.Background>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="401*"/>
+            <ColumnDefinition Width="238*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Opacity="0.92" Grid.Column="1" Margin="90,0,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="17*"/>
+                <ColumnDefinition Width="213*"/>
+                <ColumnDefinition Width="8*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="62*"/>
+                <RowDefinition Height="75*"/>
+                <RowDefinition Height="45*"/>
+            </Grid.RowDefinitions>
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="1,1" MappingMode="RelativeToBoundingBox" StartPoint="0,0">
+                    <GradientStop Color="#FFE6E6E6"/>
+                    <GradientStop Color="#FF2E2964" Offset="0.473"/>
+                </LinearGradientBrush>
+            </Grid.Background>
+            <Image Margin="43,30,0,0" Source="/Shop_Management;component/Images/user.png" Stretch="Fill" Grid.Row="1" Height="33" VerticalAlignment="Top" Grid.Column="1" HorizontalAlignment="Left" Width="38"/>
+            <Image Margin="42,69,0,0" Source="/Shop_Management;component/Images/pwd.png" Stretch="Fill" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" Width="38" Height="33" VerticalAlignment="Top"/>
+            <CheckBox x:Name="cbxSafePwd" Content="记住密码" Margin="190,138,0,0" Background="{x:Null}" BorderBrush="Black" Grid.Row="1" Grid.Column="1" Checked="cbxSafePwd_Checked" FontSize="15" HorizontalAlignment="Left" Width="109" Height="26" VerticalAlignment="Top"/>
+            <PasswordBox x:Name="pbPwd" Margin="98,78,0,0"  Background="{x:Null}" RenderTransformOrigin="0.5,0.5" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" Grid.Row="1" Grid.Column="1" SelectionOpacity="0" FontSize="15" Password="admin" Height="27" VerticalAlignment="Top" HorizontalAlignment="Left" Width="140">
+                <PasswordBox.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleY="-1"/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </PasswordBox.RenderTransform>
+            </PasswordBox>
+            <Rectangle Fill="#FF080808" Margin="100,105,0,0" Grid.Row="1" Grid.Column="1" Height="1" VerticalAlignment="Top" HorizontalAlignment="Left" Width="142"/>
+            <TextBox x:Name="tbUse" Grid.Column="1" Margin="97,31,0,0" Grid.Row="1" TextWrapping="Wrap" Text="admin" Background="{x:Null}" SelectionBrush="{x:Null}" BorderBrush="{x:Null}" Height="21" VerticalAlignment="Top" FontSize="15" HorizontalAlignment="Left" Width="145"/>
+            <Rectangle Fill="#FF080808" Margin="100,54,0,0" Height="1" VerticalAlignment="Top" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" Width="142"/>
+            <local:ImageButton x:Name="btnLogin" Grid.Column="1" Content="登陆" Height="32" Margin="190,197,0,0" Grid.Row="1" Width="82" BorderBrush="{x:Null}" FontSize="15" Opacity="0.905" Click="btnLogin_Click" VerticalAlignment="Top" HorizontalAlignment="Left" >
+                <local:ImageButton.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF567A99" Offset="0"/>
+                        <GradientStop Color="#FF4AA3EE" Offset="1"/>
+                    </LinearGradientBrush>
+                </local:ImageButton.Background>
+            </local:ImageButton>
+            <local:ImageButton x:Name="btnSet" Grid.Column="1" Content="设置" HorizontalAlignment="Left" Height="32" Margin="53,197,0,0" Grid.Row="1" Width="82" BorderBrush="{x:Null}" FontSize="15" Opacity="0.9" Background="#FF706969" VerticalAlignment="Top"/>
+            <ComboBox x:Name="cbxFd" Grid.Column="1" Margin="84,134,0,0" Grid.Row="1" RenderTransformOrigin="0.414,-0.111" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="Black" Height="26" VerticalAlignment="Top" HorizontalAlignment="Left" Width="86"/>
+            <Label Content="分店：" Height="31" Margin="33,133,0,0" Grid.Row="1" VerticalAlignment="Top" Grid.Column="1" FontSize="15" HorizontalAlignment="Left" Width="64"/>
+
+        </Grid>
+    </Grid>
+
+</UserControl>
