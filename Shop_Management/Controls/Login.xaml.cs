@@ -30,6 +30,7 @@ namespace Shop_Management.Controls
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
             this.Visibility = Visibility.Hidden;
+            //此处并没有实际的验证登陆的效果，实际上就是隐藏了登陆页面。
         }
 
         private void cbxSafePwd_Checked(object sender, RoutedEventArgs e)

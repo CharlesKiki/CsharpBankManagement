@@ -61,8 +61,10 @@ namespace Shop_Management
         private void btnmax_Click(object sender, RoutedEventArgs e)
         {
             if (btnmaxbool)
+                //最大化窗口
             {
                 this.WindowState = WindowState.Maximized;
+                //窗口状态，最大化
                 Style sty = (Style)this.FindResource("RestoreButtonStyle");
                 btnMax.Style = sty;
                 btnmaxbool = false;
@@ -72,6 +74,7 @@ namespace Shop_Management
             {
                 this.WindowState = WindowState.Normal;
                 Style sty = (Style)this.FindResource("MaxButtonStyle");
+                //？
                 btnMax.Style = sty;
                 btnmaxbool = true;
             }

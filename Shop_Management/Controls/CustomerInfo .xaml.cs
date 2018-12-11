@@ -25,6 +25,7 @@ namespace Shop_Management.Controls
     {
         public CustomerInfo()
         {
+            //Route似乎是某种重定向的概念
             InitializeComponent();
             #region 鼠标路由
             btndksh.AddHandler(Button.MouseEnterEvent, new RoutedEventHandler(ImageButton_MouseEnter), true);
@@ -48,6 +49,7 @@ namespace Shop_Management.Controls
         private void ImageButton_MouseLeave(object sender, RoutedEventArgs e)
         {
             Button btn = (Button)sender;
+            //事件
             btn.Opacity = 1;
         }
 
@@ -91,6 +93,7 @@ namespace Shop_Management.Controls
         private void btnfkjl_Click(object sender, RoutedEventArgs e)
         {
             FkjllWinsow fk = new FkjllWinsow();
+            //打开新窗口
         }
 
     }
