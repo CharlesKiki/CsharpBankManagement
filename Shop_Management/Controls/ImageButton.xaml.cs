@@ -24,7 +24,7 @@ namespace Shop_Management.Controls
         {
             InitializeComponent();
         }
-
+        //设定控件没有被按下的状态，事件
         public ImageSource Image
         {
             get { return (ImageSource)GetValue(ImageProperty); }
@@ -35,6 +35,7 @@ namespace Shop_Management.Controls
         public static readonly DependencyProperty ImageProperty =
             DependencyProperty.Register("Image", typeof(ImageSource), typeof(ImageButton), new PropertyMetadata(null));
 
+        //设定控件被按下的状态，事件
         public ImageSource PressedImage
         {
             get { return (ImageSource)GetValue(PressedImageProperty); }

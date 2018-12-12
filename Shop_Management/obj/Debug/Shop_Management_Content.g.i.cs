@@ -8,6 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/windowstate_closed1.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("bankmanagementdatabase.mdf")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("bankmanagementdatabase_log.ldf")]
 
 

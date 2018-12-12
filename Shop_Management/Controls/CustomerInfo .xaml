@@ -31,8 +31,8 @@
                 <RowDefinition Height="287*"/>
                 <RowDefinition Height="432*"/>
             </Grid.RowDefinitions>
+            <!--由Click事件完成跳转-->
             <local:ImageButton x:Name="btnkhzl" Content="客户资料" HorizontalAlignment="Left" Height="106" Margin="13,8,0,0" VerticalAlignment="Top" Width="280" Background="#FFBA6D41" Opacity="0.95" Grid.Row="1" Grid.Column="1" Click="btnkhzl_Click" />
-            
             <local:ImageButton x:Name="btnyqjl" Content="逾期记录" HorizontalAlignment="Left" Height="106" Margin="298,119,0,0" VerticalAlignment="Top" Width="138" Background="#FFF91111" Grid.Row="1" Grid.Column="1" Click="btnyqjl_Click"/>
             <local:ImageButton x:Name="btnfkjl" Content="放款记录" HorizontalAlignment="Left" Height="106" Margin="441,119,0,0" VerticalAlignment="Top" Width="138" Background="#FF292533" Grid.Row="1" Grid.Column="1" Click="btnfkjl_Click"/>
             <local:ImageButton x:Name="btndksh" Content="贷款审核" HorizontalAlignment="Left" Height="106" Margin="441,8,0,0" VerticalAlignment="Top" Width="138" Background="#FFA840DD" Grid.Row="1" Grid.Column="1" Click="btndksh_Click"/>
