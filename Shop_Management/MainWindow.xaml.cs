@@ -90,6 +90,9 @@ namespace Shop_Management
             this.WindowState = WindowState.Minimized;
         }
 
+        private void Login_Loaded(object sender, RoutedEventArgs e)
+        {
 
+        }
     }
 }

@@ -1,0 +1,5 @@
+You can find some code like this 
+<Style x:Key="MinButtonStyle" TargetType="{x:Type Button}">
+Actually, this is explicit declaration, it can clealy told xaml what control you want to describe.
+You can alse write like this.
+<Style x:Key="MinButtonStyle" TargetType="Button">

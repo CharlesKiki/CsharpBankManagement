@@ -37,8 +37,5 @@ namespace Shop_Management.Controls
         {
 
         }
-
-
-
     }
 }
