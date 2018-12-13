@@ -278,7 +278,7 @@
                 </TransformGroup>
             </Rectangle.RenderTransform>
         </Rectangle>
-        <Controls:ImageButton x:Name="btnSave" Content="提交" HorizontalAlignment="Left" Height="47" Margin="384,597,0,0" VerticalAlignment="Top" Width="100" Background="#FFECF752" Foreground="Black"/>
+        <Controls:ImageButton x:Name="btnSave" Content="提交" HorizontalAlignment="Left" Height="47" Margin="384,597,0,0" VerticalAlignment="Top" Width="100" Background="#FFECF752" Foreground="Black" Click="btnSave_Click_1"/>
         <Controls:ImageButton x:Name="btnClear" Content="重置" HorizontalAlignment="Left" Height="47" Margin="572,597,0,0" VerticalAlignment="Top" Width="100" Background="#FFA1A28D" Foreground="Black"/>
         <Controls:ImageButton x:Name="btnUpdata" Content="修改" HorizontalAlignment="Left" Height="47" Margin="197,597,0,0" VerticalAlignment="Top" Width="100" Background="#FF1B9E9E" Foreground="Black"/>
         <Controls:ImageButton x:Name="btnFfsqdkb" Content="发放贷款申请表" Height="47" Margin="747,597,197,0" VerticalAlignment="Top" Width="Auto" Background="#FFFF2300" Foreground="Black" Click="btnFfsqdkb_Click"/>

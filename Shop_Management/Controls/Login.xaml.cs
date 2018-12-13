@@ -26,16 +26,37 @@ namespace Shop_Management.Controls
             InitializeComponent();
             
         }
- 
+
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
-            this.Visibility = Visibility.Hidden;
+            string Username = tbUse.Text;
+            string Password = pbPwd.Password;
+            bool LoginCheck = false;
+            //连接数据库
+            //业务逻辑解释：用户名唯一，若存在且密码正确，通过
+            //用户名不存在，密码错误，错误
+            using (var context = new BankManagementDatabaseEntities())
+            {
+                var q = from t in context.AccountInfo
+                        where t.accountName == Username
+                        select new
+                        {
+                            用户 = t.accountName,
+                            密码 = t.accountPass
+                        };
+                //dataGrid1.ItemsSource = q.ToList();
+            }
+            if (LoginCheck == true)
+            {
+                this.Visibility = Visibility.Hidden;
+            }
             //此处并没有实际的验证登陆的效果，实际上就是隐藏了登陆页面。
         }
 
         private void cbxSafePwd_Checked(object sender, RoutedEventArgs e)
         {
-
+            //分店选择功能
+            //该功能尚未实现
         }
     }
 }

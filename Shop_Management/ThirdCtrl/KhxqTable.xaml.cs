@@ -24,8 +24,12 @@ namespace Shop_Management.ThirdCtrl
             InitializeComponent();
             this.Gr1.MouseDown += gdTitle_MouseDown;
             this.ShowDialog();
+            //Gr1是该窗口的主体页面
         }
+
         string[] Fdsz = { };
+        //
+
         public KhxqTable(string [] fdsz)
         {
             InitializeComponent();
@@ -40,6 +44,7 @@ namespace Shop_Management.ThirdCtrl
             InitializeComponent();
             this.Gr1.MouseDown += gdTitle_MouseDown;
             this.ShowDialog();
+            //显示窗口
             
 
         }
@@ -91,6 +96,7 @@ namespace Shop_Management.ThirdCtrl
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
+            //初始化控件内容
             string[] gender = {"男","女"};
             cmb_b_z2_gender.ItemsSource = cmb_b_z1_gender.ItemsSource = cmb_b_gender.ItemsSource = gender;
             cmb_b_z2_gender.SelectedIndex = cmb_b_z1_gender.SelectedIndex = cmb_b_gender.SelectedIndex = 0;
@@ -116,6 +122,19 @@ namespace Shop_Management.ThirdCtrl
             DkshTable dw = new DkshTable();
         }
 
-
+        //设计模式：
+        //检查表单信息的方式为硬编码
+        //有没有更好的方法让它分开？
+        private void btnSave_Click_1(object sender, RoutedEventArgs e)
+        {
+            //写入数据库
+        }
+         
+        //数据检查方法
+        static public bool InformationCheck()
+        {
+            //尚未完成
+            return true;
+        }
     }
 }
