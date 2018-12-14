@@ -17,6 +17,7 @@ using System.Windows.Shapes;
 //using Wsy_Model;
 //数据库缺失
 
+    //分店管理逻辑
 namespace Shop_Management.SecondCtrl
 {
     /// <summary>
@@ -27,10 +28,13 @@ namespace Shop_Management.SecondCtrl
         public FdglWinsow()
         {
             InitializeComponent();
+            //初始化控件
             this.Gd1.MouseDown += Gd1_MouseDown;
+            //鼠标拖动事件
             this.ShowDialog();          
-
+            //显示界面
         }
+        //当窗口被鼠标按下的事件
         void Gd1_MouseDown(object sender, MouseButtonEventArgs e)
         {
             try
@@ -50,6 +54,7 @@ namespace Shop_Management.SecondCtrl
         {
             this.WindowState = WindowState.Minimized;
         }
+        //实际上这是一个新的窗口，当前的窗口是显示信息的业务逻辑
         private void btnTxkhzl_Click(object sender, RoutedEventArgs e)
         {
             FdglTable rt = new FdglTable();

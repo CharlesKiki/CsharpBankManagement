@@ -36,7 +36,7 @@
             <Image Margin="43,30,0,0" Source="/Shop_Management;component/Images/user.png" Stretch="Fill" Grid.Row="1" Height="33" VerticalAlignment="Top" Grid.Column="1" HorizontalAlignment="Left" Width="38"/>
             <Image Margin="42,69,0,0" Source="/Shop_Management;component/Images/pwd.png" Stretch="Fill" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" Width="38" Height="33" VerticalAlignment="Top"/>
             <CheckBox x:Name="cbxSafePwd" Content="记住密码" Margin="190,138,0,0" Background="{x:Null}" BorderBrush="Black" Grid.Row="1" Grid.Column="1" Checked="cbxSafePwd_Checked" FontSize="15" HorizontalAlignment="Left" Width="109" Height="26" VerticalAlignment="Top"/>
-            <PasswordBox x:Name="pbPwd" Margin="98,78,0,0"  Background="{x:Null}" RenderTransformOrigin="0.5,0.5" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" Grid.Row="1" Grid.Column="1" SelectionOpacity="0" FontSize="15" Password="admin" Height="27" VerticalAlignment="Top" HorizontalAlignment="Left" Width="140">
+            <PasswordBox x:Name="pbPwd" Margin="98,78,0,0"  Background="{x:Null}" RenderTransformOrigin="0.5,0.5" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" Grid.Row="1" Grid.Column="1" SelectionOpacity="0" FontSize="15" Password="123456" Height="27" VerticalAlignment="Top" HorizontalAlignment="Left" Width="140">
                 <PasswordBox.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform ScaleY="-1"/>
@@ -47,7 +47,7 @@
                 </PasswordBox.RenderTransform>
             </PasswordBox>
             <Rectangle Fill="#FF080808" Margin="100,105,0,0" Grid.Row="1" Grid.Column="1" Height="1" VerticalAlignment="Top" HorizontalAlignment="Left" Width="142"/>
-            <TextBox x:Name="tbUse" Grid.Column="1" Margin="97,31,0,0" Grid.Row="1" TextWrapping="Wrap" Text="admin" Background="{x:Null}" SelectionBrush="{x:Null}" BorderBrush="{x:Null}" Height="21" VerticalAlignment="Top" FontSize="15" HorizontalAlignment="Left" Width="145"/>
+            <TextBox x:Name="tbUse" Grid.Column="1" Margin="97,31,0,0" Grid.Row="1" TextWrapping="Wrap" Text="0001" Background="{x:Null}" SelectionBrush="{x:Null}" BorderBrush="{x:Null}" Height="21" VerticalAlignment="Top" FontSize="15" HorizontalAlignment="Left" Width="145"/>
             <Rectangle Fill="#FF080808" Margin="100,54,0,0" Height="1" VerticalAlignment="Top" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" Width="142"/>
             <local:ImageButton x:Name="btnLogin" Grid.Column="1" Content="登陆" Height="32" Margin="190,197,0,0" Grid.Row="1" Width="82" BorderBrush="{x:Null}" FontSize="15" Opacity="0.905" Click="btnLogin_Click" VerticalAlignment="Top" HorizontalAlignment="Left" >
                 <local:ImageButton.Background>

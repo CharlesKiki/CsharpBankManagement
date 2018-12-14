@@ -11,7 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-
+//还款信息表
 namespace Shop_Management.ThirdCtrl
 {
     /// <summary>

@@ -15,6 +15,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
+//代办事项逻辑
 namespace Shop_Management.SecondCtrl
 {
     /// <summary>
@@ -25,8 +26,11 @@ namespace Shop_Management.SecondCtrl
         public DbsxWinsow()
         {
             InitializeComponent();
+            //初始化控件
             this.Gd1.MouseDown += Gd1_MouseDown;
-            this.ShowDialog();          
+            //绑定事件
+            this.ShowDialog();  
+            //显示当前窗口
 
         }
 
@@ -35,20 +39,25 @@ namespace Shop_Management.SecondCtrl
             try
             {
                 this.DragMove();
+                //窗口拖动
             }
             catch
             {
             }
 
         }
+        //关闭按钮
         private void tbnclose_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
         }
+        //最小化窗口
         private void btnmin_Click(object sender, RoutedEventArgs e)
         {
             this.WindowState = WindowState.Minimized;
         }
+        //以打开新窗口的方式执行业务
+        //该功能尚未完成，需要连接数据库
         private void btnTxkhzl_Click(object sender, RoutedEventArgs e)
         {
 
@@ -65,7 +74,8 @@ namespace Shop_Management.SecondCtrl
 
 
         }
-
+        //添加业务催收名单
+        //该功能尚未完成，只是简单的示例
         private void dg_Loaded(object sender, RoutedEventArgs e)
         {
             List<test> aa = new List<test>();
@@ -75,6 +85,7 @@ namespace Shop_Management.SecondCtrl
             aa.Add(sa);
             dg.ItemsSource = aa;
         }
+        //测试
         public class test
         {
             public string dbsx { get; set; }
@@ -82,7 +93,7 @@ namespace Shop_Management.SecondCtrl
             public string jd { get; set; }
             public string sj { get; set; }
         }
-
+        //关闭按钮
         private void btnExit_Click(object sender, RoutedEventArgs e)
         {
             this.Close();

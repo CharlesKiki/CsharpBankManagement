@@ -127,7 +127,10 @@ namespace Shop_Management.ThirdCtrl
         //有没有更好的方法让它分开？
         private void btnSave_Click_1(object sender, RoutedEventArgs e)
         {
-            //写入数据库
+            //应该写入的数据
+            String name = txt_b_name.Text;
+            //数据库写入
+            //数据库保存
         }
          
         //数据检查方法

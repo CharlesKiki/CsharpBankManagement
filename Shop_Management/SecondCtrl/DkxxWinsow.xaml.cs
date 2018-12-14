@@ -17,6 +17,7 @@ using System.Windows.Shapes;
 //using Wsy_Model;
 //这是一个数据库的模型，这需要重新编写数据库
 
+    //贷款信息
 namespace Shop_Management.SecondCtrl
 {
     /// <summary>
@@ -27,11 +28,14 @@ namespace Shop_Management.SecondCtrl
         public DkxxWinsow()
         {
             InitializeComponent();
+            //初始化控件
             this.Gd1.MouseDown += Gd1_MouseDown;
-            this.ShowDialog();          
+            //鼠标事件
+            this.ShowDialog();
+            //显示窗口
 
         }
-
+        //拖动事件
         void Gd1_MouseDown(object sender, MouseButtonEventArgs e)
         {
             try
@@ -43,20 +47,24 @@ namespace Shop_Management.SecondCtrl
             }
 
         }
+        //关闭事件
         private void tbnclose_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
         }
+        //最小化事件
         private void btnmin_Click(object sender, RoutedEventArgs e)
         {
             this.WindowState = WindowState.Minimized;
         }
 
+        //贷款信息窗口
         private void btnTxkhzl_Click(object sender, RoutedEventArgs e)
         {
 
             //DkxxTable dt = new DkxxTable(dk);
         }
+        //初始化了一个表信息，这是用来模拟数据库用的
             //dk_info dk = new dk_info
             //{
             //    dk_bkcard = "123456789123456789",
@@ -78,6 +86,7 @@ namespace Shop_Management.SecondCtrl
             //};
         private void dg_Loaded(object sender, RoutedEventArgs e)
         {
+            //初始化了一个表信息，增加到item内
             //List<dk_info> ld = new List<dk_info>();
             //ld.Add(dk);
             //dg.ItemsSource = ld;
