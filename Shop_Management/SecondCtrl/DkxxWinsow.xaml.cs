@@ -14,7 +14,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using Wsy_Model;
+//using Wsy_Model;
+//这是一个数据库的模型，这需要重新编写数据库
 
 namespace Shop_Management.SecondCtrl
 {
@@ -54,32 +55,32 @@ namespace Shop_Management.SecondCtrl
         private void btnTxkhzl_Click(object sender, RoutedEventArgs e)
         {
 
-            DkxxTable dt = new DkxxTable(dk);
+            //DkxxTable dt = new DkxxTable(dk);
         }
-            dk_info dk = new dk_info
-            {
-                dk_bkcard = "123456789123456789",
-                dk_id = "0012",
-                dk_lv = "0.05%",
-                dk_md = "没钱吃饭",
-                dk_remark = "12346",
-                dk_stat = DateTime.Now.ToString(),
-                dk_y = "2",
-                dk_y_count = "15",
-                dk_y_money = " ",
-                dk_zmoney = "50",
-                name = "李四",
-                ofd = "总店",
-                remark = "",
-                sfz = "456798798131345646",
-                zjr = "root",
-                zjr_ofd = "总店"
-            };
+            //dk_info dk = new dk_info
+            //{
+            //    dk_bkcard = "123456789123456789",
+            //    dk_id = "0012",
+            //    dk_lv = "0.05%",
+            //    dk_md = "没钱吃饭",
+            //    dk_remark = "12346",
+            //    dk_stat = DateTime.Now.ToString(),
+            //    dk_y = "2",
+            //    dk_y_count = "15",
+            //    dk_y_money = " ",
+            //    dk_zmoney = "50",
+            //    name = "李四",
+            //    ofd = "总店",
+            //    remark = "",
+            //    sfz = "456798798131345646",
+            //    zjr = "root",
+            //    zjr_ofd = "总店"
+            //};
         private void dg_Loaded(object sender, RoutedEventArgs e)
         {
-            List<dk_info> ld = new List<dk_info>();
-            ld.Add(dk);
-            dg.ItemsSource = ld;
+            //List<dk_info> ld = new List<dk_info>();
+            //ld.Add(dk);
+            //dg.ItemsSource = ld;
         }
 
 

@@ -25,10 +25,11 @@ namespace Shop_Management
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<AccountInfo> AccountInfo { get; set; }
         public virtual DbSet<Branch> Branch { get; set; }
         public virtual DbSet<EmployeeInfo> EmployeeInfo { get; set; }
         public virtual DbSet<MoneyInfo> MoneyInfo { get; set; }
         public virtual DbSet<RateInfo> RateInfo { get; set; }
+        public virtual DbSet<LoginInfo> LoginInfo { get; set; }
+        public virtual DbSet<AccountInfo> AccountInfo { get; set; }
     }
 }

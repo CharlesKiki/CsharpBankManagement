@@ -4,10 +4,10 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="BankManagementDatabaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="BankManagementDatabaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="AccountInfo">
           <Key>
-            <PropertyRef Name="accountNo" />
+            <PropertyRef Name="accountName" />
           </Key>
           <Property Name="accountNo" Type="int" Nullable="false" />
           <Property Name="accountName" Type="nvarchar" MaxLength="20" Nullable="false" />
@@ -33,6 +33,13 @@
           <Property Name="telephone" Type="nchar" MaxLength="10" Nullable="false" />
           <Property Name="photo" Type="varbinary(max)" Nullable="false" />
         </EntityType>
+        <EntityType Name="LoginInfo">
+          <Key>
+            <PropertyRef Name="Bno" />
+          </Key>
+          <Property Name="Bno" Type="nchar" MaxLength="5" Nullable="false" />
+          <Property Name="Password" Type="nvarchar" MaxLength="20" Nullable="false" />
+        </EntityType>
         <EntityType Name="MoneyInfo">
           <Key>
             <PropertyRef Name="Id" />
@@ -55,23 +62,14 @@
           <EntitySet Name="AccountInfo" EntityType="Self.AccountInfo" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Branch" EntityType="Self.Branch" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="EmployeeInfo" EntityType="Self.EmployeeInfo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LoginInfo" EntityType="Self.LoginInfo" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="MoneyInfo" EntityType="Self.MoneyInfo" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="RateInfo" EntityType="Self.RateInfo" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="BankManagementDatabaseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityType Name="AccountInfo">
-          <Key>
-            <PropertyRef Name="accountNo" />
-          </Key>
-          <Property Name="accountNo" Type="Int32" Nullable="false" />
-          <Property Name="accountName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="accountPass" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="accountType" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
-        </EntityType>
         <EntityType Name="Branch">
           <Key>
             <PropertyRef Name="Id" />
@@ -110,28 +108,35 @@
           <Property Name="rationValue" Type="Double" />
         </EntityType>
         <EntityContainer Name="BankManagementDatabaseEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="AccountInfo" EntityType="Self.AccountInfo" />
           <EntitySet Name="Branch" EntityType="Self.Branch" />
           <EntitySet Name="EmployeeInfo" EntityType="Self.EmployeeInfo" />
           <EntitySet Name="MoneyInfo" EntityType="Self.MoneyInfo" />
           <EntitySet Name="RateInfo" EntityType="Self.RateInfo" />
+          <EntitySet Name="LoginInfo" EntityType="BankManagementDatabaseModel.LoginInfo" />
+          <EntitySet Name="AccountInfo" EntityType="BankManagementDatabaseModel.AccountInfo" />
         </EntityContainer>
+        <EntityType Name="LoginInfo">
+          <Key>
+            <PropertyRef Name="Bno" />
+          </Key>
+          <Property Name="Bno" Type="String" Nullable="false" MaxLength="5" FixedLength="true" Unicode="true" />
+          <Property Name="Password" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="AccountInfo">
+          <Key>
+            <PropertyRef Name="accountName" />
+          </Key>
+          <Property Name="accountNo" Type="Int32" Nullable="false" />
+          <Property Name="accountName" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="accountPass" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="accountType" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="BankManagementDatabaseModelStoreContainer" CdmEntityContainer="BankManagementDatabaseEntities">
-          <EntitySetMapping Name="AccountInfo">
-            <EntityTypeMapping TypeName="BankManagementDatabaseModel.AccountInfo">
-              <MappingFragment StoreEntitySet="AccountInfo">
-                <ScalarProperty Name="accountNo" ColumnName="accountNo" />
-                <ScalarProperty Name="accountName" ColumnName="accountName" />
-                <ScalarProperty Name="accountPass" ColumnName="accountPass" />
-                <ScalarProperty Name="accountType" ColumnName="accountType" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="Branch">
             <EntityTypeMapping TypeName="BankManagementDatabaseModel.Branch">
               <MappingFragment StoreEntitySet="Branch">
@@ -170,6 +175,24 @@
               <MappingFragment StoreEntitySet="RateInfo">
                 <ScalarProperty Name="rationType" ColumnName="rationType" />
                 <ScalarProperty Name="rationValue" ColumnName="rationValue" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LoginInfo">
+            <EntityTypeMapping TypeName="BankManagementDatabaseModel.LoginInfo">
+              <MappingFragment StoreEntitySet="LoginInfo">
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Bno" ColumnName="Bno" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AccountInfo">
+            <EntityTypeMapping TypeName="BankManagementDatabaseModel.AccountInfo">
+              <MappingFragment StoreEntitySet="AccountInfo">
+                <ScalarProperty Name="accountType" ColumnName="accountType" />
+                <ScalarProperty Name="accountPass" ColumnName="accountPass" />
+                <ScalarProperty Name="accountName" ColumnName="accountName" />
+                <ScalarProperty Name="accountNo" ColumnName="accountNo" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

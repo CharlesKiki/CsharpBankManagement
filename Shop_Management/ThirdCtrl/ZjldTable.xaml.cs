@@ -11,7 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using Wsy_Model;
+//using Wsy_Model;
 using Wsy_webApiSystem;
 
 
@@ -32,15 +32,16 @@ namespace Shop_Management.ThirdCtrl
             this.Gd1.MouseDown += Gd1_MouseDown;
             this.ShowDialog();
         }
-        money_info Model;
-        public ZjldTable( money_info mi)
-        {
-            Model = mi;
-            InitializeComponent();
-            this.Gd1.MouseDown += Gd1_MouseDown;
-            this.ShowDialog();
-        }
-
+        //money_info Model;
+        //这里实例化了一个缺失的数据库对象
+        //public ZjldTable( money_info mi)
+        //{
+        //    Model = mi;
+        //    InitializeComponent();
+        //    this.Gd1.MouseDown += Gd1_MouseDown;
+        //    this.ShowDialog();
+        //}
+        //这段代码的逻辑因为缺失了数据库不能使用
         void Gd1_MouseDown(object sender, MouseButtonEventArgs e)
         {
             try
@@ -75,8 +76,9 @@ namespace Shop_Management.ThirdCtrl
 
         private void Gd1_Loaded(object sender, RoutedEventArgs e)
         {
-            Dictionary<string, string> myd = sqlHelper.ConvertTToDsT(Model);
-            WindowElementHelper.setWindowGdElementPvs(gdzjldxx, myd);
+            //缺失了数据库
+            //Dictionary<string, string> myd = sqlHelper.ConvertTToDsT(Model);
+            //WindowElementHelper.setWindowGdElementPvs(gdzjldxx, myd);
         }
 
 

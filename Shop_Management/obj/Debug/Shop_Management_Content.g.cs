@@ -10,5 +10,7 @@
 
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("bankmanagementdatabase.mdf")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("bankmanagementdatabase_log.ldf")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("databasemodel.context.tt")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("databasemodel.tt")]
 
 

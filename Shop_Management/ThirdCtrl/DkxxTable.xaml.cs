@@ -11,7 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using Wsy_Model;
+//using Wsy_Model;
 using Wsy_webApiSystem;
 
 namespace Shop_Management.ThirdCtrl
@@ -28,14 +28,14 @@ namespace Shop_Management.ThirdCtrl
             this.ShowDialog();
         }
         bool Btnxq = false;
-        dk_info DK;
-        public DkxxTable(dk_info dk)
-        {
-            DK = dk;
-            InitializeComponent();
-            this.Gd1.MouseDown += Gd1_MouseDown;
-            this.ShowDialog();
-        }
+        //dk_info DK;
+        //public DkxxTable(dk_info dk)
+        //{
+        //    DK = dk;
+        //    InitializeComponent();
+        //    this.Gd1.MouseDown += Gd1_MouseDown;
+        //    this.ShowDialog();
+        //}
         public DkxxTable(bool btnXq)
         {
             Btnxq = btnXq;
@@ -78,11 +78,11 @@ namespace Shop_Management.ThirdCtrl
             {
                 btnTxkhzl.Content = "查看客户详情";
             }
-            if (DK != null)
-            {
-                Dictionary<string, string> myd = sqlHelper.ConvertTToDsT(DK);
-                WindowElementHelper.setWindowGdElementPvs(gddksq, myd);
-            }
+            //if (DK != null)
+            //{
+            //    Dictionary<string, string> myd = sqlHelper.ConvertTToDsT(DK);
+            //    WindowElementHelper.setWindowGdElementPvs(gddksq, myd);
+            //}
         }
 
       

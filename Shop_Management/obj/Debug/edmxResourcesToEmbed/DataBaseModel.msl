@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BankManagementDatabaseModelStoreContainer" CdmEntityContainer="BankManagementDatabaseEntities">
+    <EntitySetMapping Name="Branch">
+      <EntityTypeMapping TypeName="BankManagementDatabaseModel.Branch">
+        <MappingFragment StoreEntitySet="Branch">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="branchNo" ColumnName="branchNo" />
+          <ScalarProperty Name="employeeNo" ColumnName="employeeNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EmployeeInfo">
+      <EntityTypeMapping TypeName="BankManagementDatabaseModel.EmployeeInfo">
+        <MappingFragment StoreEntitySet="EmployeeInfo">
+          <ScalarProperty Name="EmployeeNo" ColumnName="EmployeeNo" />
+          <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="workDate" ColumnName="workDate" />
+          <ScalarProperty Name="telephone" ColumnName="telephone" />
+          <ScalarProperty Name="photo" ColumnName="photo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MoneyInfo">
+      <EntityTypeMapping TypeName="BankManagementDatabaseModel.MoneyInfo">
+        <MappingFragment StoreEntitySet="MoneyInfo">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="accountNo" ColumnName="accountNo" />
+          <ScalarProperty Name="dealDate" ColumnName="dealDate" />
+          <ScalarProperty Name="dealType" ColumnName="dealType" />
+          <ScalarProperty Name="dealMoney" ColumnName="dealMoney" />
+          <ScalarProperty Name="balance" ColumnName="balance" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RateInfo">
+      <EntityTypeMapping TypeName="BankManagementDatabaseModel.RateInfo">
+        <MappingFragment StoreEntitySet="RateInfo">
+          <ScalarProperty Name="rationType" ColumnName="rationType" />
+          <ScalarProperty Name="rationValue" ColumnName="rationValue" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LoginInfo">
+      <EntityTypeMapping TypeName="BankManagementDatabaseModel.LoginInfo">
+        <MappingFragment StoreEntitySet="LoginInfo">
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Bno" ColumnName="Bno" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AccountInfo">
+      <EntityTypeMapping TypeName="BankManagementDatabaseModel.AccountInfo">
+        <MappingFragment StoreEntitySet="AccountInfo">
+          <ScalarProperty Name="accountType" ColumnName="accountType" />
+          <ScalarProperty Name="accountPass" ColumnName="accountPass" />
+          <ScalarProperty Name="accountName" ColumnName="accountName" />
+          <ScalarProperty Name="accountNo" ColumnName="accountNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

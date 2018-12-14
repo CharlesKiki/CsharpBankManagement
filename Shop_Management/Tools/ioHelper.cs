@@ -23,7 +23,8 @@ using Microsoft.Runtime;
 using System.Data.OleDb;
 using System.Data.Odbc;
 using System.Reflection;
-using Wsy_Model;
+//using Wsy_Model;
+//这个Model不确定是不是数据库Model
 using type_lds = System.Collections.Generic.List<System.Collections.Generic.Dictionary<string, string>>;
 using type_llds = System.Collections.Generic.List<System.Collections.Generic.List<System.Collections.Generic.Dictionary<string, string>>>;
 using type_dllds = System.Collections.Generic.Dictionary<string, System.Collections.Generic.List<System.Collections.Generic.List<System.Collections.Generic.Dictionary<string, string>>>>;

@@ -14,7 +14,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using Wsy_Model;
+//using Wsy_Model;
 
 namespace Shop_Management.SecondCtrl
 {
@@ -53,9 +53,9 @@ namespace Shop_Management.SecondCtrl
 
         private void dg_Loaded(object sender, RoutedEventArgs e)
         {
-            List<yq_info> ld = new List<yq_info>();
+            //List<yq_info> ld = new List<yq_info>();
            // ld.Add(dk);
-            dg.ItemsSource = ld;
+           // dg.ItemsSource = ld;
         }
 
 

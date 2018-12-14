@@ -1,0 +1,3 @@
+Here is the database fields explain.
+	LoginInfo table
+		Bno BankNumber: it is a unique number as login proof.

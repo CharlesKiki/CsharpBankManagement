@@ -14,7 +14,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using Wsy_Model;
+//using Wsy_Model;
+//数据库缺失
 
 namespace Shop_Management.SecondCtrl
 {
@@ -55,9 +56,10 @@ namespace Shop_Management.SecondCtrl
         }
         private void dg_Loaded(object sender, RoutedEventArgs e)
         {
-            List<hk_info> ld = new List<hk_info>();
+            //数据库缺失
+           // List<hk_info> ld = new List<hk_info>();
            // ld.Add(dk);
-            dg.ItemsSource = ld;
+            //dg.ItemsSource = ld;
         }
         private void Gd1_Loaded(object sender, RoutedEventArgs e)
         {

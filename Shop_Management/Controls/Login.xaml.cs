@@ -26,7 +26,8 @@ namespace Shop_Management.Controls
             InitializeComponent();
             
         }
-
+        private BankManagementDatabaseEntities context = new BankManagementDatabaseEntities();
+        //声明数据库上下文
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
             string Username = tbUse.Text;
@@ -35,17 +36,22 @@ namespace Shop_Management.Controls
             //连接数据库
             //业务逻辑解释：用户名唯一，若存在且密码正确，通过
             //用户名不存在，密码错误，错误
-            using (var context = new BankManagementDatabaseEntities())
+
+            var query = from t in context.LoginInfo
+                        where t.Bno == this.tbUse.Text && t.Password == this.pbPwd.Password
+                        select t;
+            if (query.Count() > 0)
             {
-                var q = from t in context.AccountInfo
-                        where t.accountName == Username
-                        select new
-                        {
-                            用户 = t.accountName,
-                            密码 = t.accountPass
-                        };
-                //dataGrid1.ItemsSource = q.ToList();
+                var q = query.First();
+                LoginCheck = true;
             }
+            else
+            {
+                MessageBox.Show("登录失败！");
+                this.pbPwd.Clear();
+                this.tbUse.Focus();
+            }
+
             if (LoginCheck == true)
             {
                 this.Visibility = Visibility.Hidden;

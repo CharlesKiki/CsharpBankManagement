@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BankManagementDatabaseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Branch">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="branchNo" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="employeeNo" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityType Name="EmployeeInfo">
+    <Key>
+      <PropertyRef Name="EmployeeNo" />
+    </Key>
+    <Property Name="EmployeeNo" Type="Int32" Nullable="false" />
+    <Property Name="EmployeeName" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="Gender" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="workDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="telephone" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="photo" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MoneyInfo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="accountNo" Type="String" MaxLength="6" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="dealDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="dealType" Type="String" MaxLength="8" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="dealMoney" Type="Double" Nullable="false" />
+    <Property Name="balance" Type="Double" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RateInfo">
+    <Key>
+      <PropertyRef Name="rationType" />
+    </Key>
+    <Property Name="rationType" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="rationValue" Type="Double" />
+  </EntityType>
+  <EntityContainer Name="BankManagementDatabaseEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Branch" EntityType="Self.Branch" />
+    <EntitySet Name="EmployeeInfo" EntityType="Self.EmployeeInfo" />
+    <EntitySet Name="MoneyInfo" EntityType="Self.MoneyInfo" />
+    <EntitySet Name="RateInfo" EntityType="Self.RateInfo" />
+    <EntitySet Name="LoginInfo" EntityType="BankManagementDatabaseModel.LoginInfo" />
+    <EntitySet Name="AccountInfo" EntityType="BankManagementDatabaseModel.AccountInfo" />
+  </EntityContainer>
+  <EntityType Name="LoginInfo">
+    <Key>
+      <PropertyRef Name="Bno" />
+    </Key>
+    <Property Name="Bno" Type="String" Nullable="false" MaxLength="5" FixedLength="true" Unicode="true" />
+    <Property Name="Password" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="AccountInfo">
+    <Key>
+      <PropertyRef Name="accountName" />
+    </Key>
+    <Property Name="accountNo" Type="Int32" Nullable="false" />
+    <Property Name="accountName" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="accountPass" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="accountType" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+  </EntityType>
+</Schema>
