@@ -33,6 +33,17 @@
           <Property Name="telephone" Type="nchar" MaxLength="10" Nullable="false" />
           <Property Name="photo" Type="varbinary(max)" Nullable="false" />
         </EntityType>
+        <EntityType Name="LoanApplication">
+          <Key>
+            <PropertyRef Name="CustomerName" />
+          </Key>
+          <Property Name="CustomerName" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="TransactionID" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="CustomerChineseID" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="RepaymentWeek" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="CreditPurpose" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="ApplicationDate" Type="nchar" MaxLength="10" Nullable="false" />
+        </EntityType>
         <EntityType Name="LoginInfo">
           <Key>
             <PropertyRef Name="Bno" />
@@ -62,6 +73,7 @@
           <EntitySet Name="AccountInfo" EntityType="Self.AccountInfo" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Branch" EntityType="Self.Branch" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="EmployeeInfo" EntityType="Self.EmployeeInfo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LoanApplication" EntityType="Self.LoanApplication" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="LoginInfo" EntityType="Self.LoginInfo" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="MoneyInfo" EntityType="Self.MoneyInfo" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="RateInfo" EntityType="Self.RateInfo" Schema="dbo" store:Type="Tables" />
@@ -114,6 +126,7 @@
           <EntitySet Name="RateInfo" EntityType="Self.RateInfo" />
           <EntitySet Name="LoginInfo" EntityType="BankManagementDatabaseModel.LoginInfo" />
           <EntitySet Name="AccountInfo" EntityType="BankManagementDatabaseModel.AccountInfo" />
+          <EntitySet Name="LoanApplication" EntityType="BankManagementDatabaseModel.LoanApplication" />
         </EntityContainer>
         <EntityType Name="LoginInfo">
           <Key>
@@ -130,6 +143,17 @@
           <Property Name="accountName" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="accountPass" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="accountType" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="LoanApplication">
+          <Key>
+            <PropertyRef Name="CustomerName" />
+          </Key>
+          <Property Name="CustomerName" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="TransactionID" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="CustomerChineseID" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="RepaymentWeek" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="CreditPurpose" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="ApplicationDate" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -193,6 +217,18 @@
                 <ScalarProperty Name="accountPass" ColumnName="accountPass" />
                 <ScalarProperty Name="accountName" ColumnName="accountName" />
                 <ScalarProperty Name="accountNo" ColumnName="accountNo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LoanApplication">
+            <EntityTypeMapping TypeName="BankManagementDatabaseModel.LoanApplication">
+              <MappingFragment StoreEntitySet="LoanApplication">
+                <ScalarProperty Name="ApplicationDate" ColumnName="ApplicationDate" />
+                <ScalarProperty Name="CreditPurpose" ColumnName="CreditPurpose" />
+                <ScalarProperty Name="RepaymentWeek" ColumnName="RepaymentWeek" />
+                <ScalarProperty Name="CustomerChineseID" ColumnName="CustomerChineseID" />
+                <ScalarProperty Name="TransactionID" ColumnName="TransactionID" />
+                <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

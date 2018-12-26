@@ -110,6 +110,9 @@
     <Compile Include="EmployeeInfo.cs">
       <DependentUpon>DataBaseModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="LoanApplication.cs">
+      <DependentUpon>DataBaseModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="LoginInfo.cs">
       <DependentUpon>DataBaseModel.tt</DependentUpon>
     </Compile>

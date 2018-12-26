@@ -11,6 +11,7 @@
         <EntityTypeShape EntityType="BankManagementDatabaseModel.RateInfo" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="BankManagementDatabaseModel.LoginInfo" Width="1.5" PointX="5.375" PointY="3.75" />
         <EntityTypeShape EntityType="BankManagementDatabaseModel.AccountInfo" Width="1.5" PointX="0.875" PointY="1" />
+        <EntityTypeShape EntityType="BankManagementDatabaseModel.LoanApplication" Width="1.5" PointX="5.375" PointY="5.375" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

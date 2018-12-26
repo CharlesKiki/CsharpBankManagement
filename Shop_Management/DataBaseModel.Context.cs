@@ -31,5 +31,6 @@ namespace Shop_Management
         public virtual DbSet<RateInfo> RateInfo { get; set; }
         public virtual DbSet<LoginInfo> LoginInfo { get; set; }
         public virtual DbSet<AccountInfo> AccountInfo { get; set; }
+        public virtual DbSet<LoanApplication> LoanApplication { get; set; }
     }
 }
