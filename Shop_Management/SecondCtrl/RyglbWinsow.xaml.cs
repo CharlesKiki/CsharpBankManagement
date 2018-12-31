@@ -31,6 +31,9 @@ namespace Shop_Management.SecondCtrl
 
         }
 
+        private BankManagementDatabaseEntities context = new BankManagementDatabaseEntities();
+        //声明数据库上下文
+
         void Gd1_MouseDown(object sender, MouseButtonEventArgs e)
         {
             try
@@ -64,16 +67,23 @@ namespace Shop_Management.SecondCtrl
         {
             string[] fl = { "真实姓名","电话号码","所属分店" ,"职位"};
             cmbState.ItemsSource = fl;
+            //combox下拉菜单内容
             cmbState.SelectedIndex = 0;
         }
-
+        //更新按钮
         private void btnUpData_Click(object sender, RoutedEventArgs e)
         {
+            //修改某个员工的信息表格
             RyglTable rt = new RyglTable("更新", true);
+            //重新刷新当前的DataGrid
         }
+        //增加新员工
         private void btnAdd_Click(object sender, RoutedEventArgs e)
         {
+            //打开新的表，增加员工的逻辑在表中
             RyglTable rt = new RyglTable("添加", true);
+            //连接数据库，刷新当前的表格
+            
         }
 
 
