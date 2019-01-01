@@ -64,6 +64,7 @@ namespace Shop_Management.SecondCtrl
         {
             this.WindowState = WindowState.Minimized;
         }
+
         //业务逻辑加载，显示放宽记录
         private void dg_Loaded(object sender, RoutedEventArgs e)
         {

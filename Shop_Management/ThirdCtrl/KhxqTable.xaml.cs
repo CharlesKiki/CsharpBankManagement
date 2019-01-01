@@ -19,6 +19,9 @@ namespace Shop_Management.ThirdCtrl
     /// </summary>
     public partial class KhxqTable : Window
     {
+        private BankManagementDatabaseEntities context = new BankManagementDatabaseEntities();
+        //声明数据库上下文
+
         public KhxqTable()
         {
             InitializeComponent();
@@ -83,9 +86,14 @@ namespace Shop_Management.ThirdCtrl
             this.WindowState = WindowState.Minimized;
         }
 
+        //保存按钮
         private void btnSave_Click(object sender, RoutedEventArgs e)
         {
-            
+            //更新有变化的客户信息部分
+
+            //保存到数据库
+
+
         }
 
         private void btnFfsqdkb_Click(object sender, RoutedEventArgs e)

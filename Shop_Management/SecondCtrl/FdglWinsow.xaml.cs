@@ -70,12 +70,14 @@ namespace Shop_Management.SecondCtrl
         {
 
         }
-
+        //更新按钮，这回导致一个新的界面弹出，
+        //该界面应该从数据库加载当前某用户的信息
         private void btnUpData_Click(object sender, RoutedEventArgs e)
         {
             FdglTable rt = new FdglTable("更新", true);
         }
 
+        //添加新的信息，这会导致一个新的空申请表
         private void btnAdd_Click(object sender, RoutedEventArgs e)
         {
             FdglTable rt = new FdglTable("添加", true);

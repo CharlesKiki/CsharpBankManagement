@@ -63,6 +63,8 @@ namespace Shop_Management.SecondCtrl
             DkshTable dt = new DkshTable();
         }
 
+        //加载所有的贷款申请
+        //根据当前的分店的情况分别的显示贷款情况
         private void dg_Loaded(object sender, RoutedEventArgs e)
         {
             //在列表中增加贷款审核的item

@@ -56,6 +56,7 @@ namespace Shop_Management.SecondCtrl
         {
             this.WindowState = WindowState.Minimized;
         }
+
         //以打开新窗口的方式执行业务
         //该功能尚未完成，需要连接数据库
         private void btnTxkhzl_Click(object sender, RoutedEventArgs e)
@@ -71,7 +72,7 @@ namespace Shop_Management.SecondCtrl
             {
                 NewMessagebox nm = new NewMessagebox("张三以欠款一天，请催收", true);
             }
-
+            //数据库需要增加，对欠款时间字段的表
 
         }
         //添加业务催收名单

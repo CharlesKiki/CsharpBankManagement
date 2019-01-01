@@ -16,6 +16,13 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 //using Wsy_Model;
 
+
+    /*
+     数据库设计：
+     人员清单表
+     分店表
+     一个分店和一个人员是一一对应的。暂时没有设计管理人员
+     */
 namespace Shop_Management.SecondCtrl
 {
     /// <summary>

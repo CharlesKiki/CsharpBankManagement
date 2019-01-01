@@ -58,12 +58,13 @@ namespace Shop_Management.SecondCtrl
             this.WindowState = WindowState.Minimized;
         }
 
-        //贷款信息窗口
+        //贷款信息窗口，点击后会打开新的申请贷款界面
         private void btnTxkhzl_Click(object sender, RoutedEventArgs e)
         {
 
             //DkxxTable dt = new DkxxTable(dk);
         }
+
         //初始化了一个表信息，这是用来模拟数据库用的
             //dk_info dk = new dk_info
             //{
@@ -84,6 +85,8 @@ namespace Shop_Management.SecondCtrl
             //    zjr = "root",
             //    zjr_ofd = "总店"
             //};
+
+        //加载函数，加载进入时的显示内容
         private void dg_Loaded(object sender, RoutedEventArgs e)
         {
             //初始化了一个表信息，增加到item内
